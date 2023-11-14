@@ -5,9 +5,12 @@ import numpy as np
 
 IMG_SIZE = 227
 
-class_list = {'0': 'NORMAL', '1': 'PNEUMONIA'}
+class_list = {'0': 'Female', '1': 'Male'}
 
-st.title('Pneumonia prediction based on chest X-Ray image')
+st.title('Gender detection based on Vietnamese full name')
+
+image = Image.open('vietnamese names.png')
+st.image(image)
 
 input = open('lrc_xray.pkl', 'rb')
 model = pkl.load(input)
